@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="wdith=device-width, initial scale=1.0">
+
+        <title>Black Jack</title>
+
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+    <body>
+        <div id="full-container">
+            <section id="intro-section">
+
+                <h1 id="intro-title">Welcome to BlackJack!</h1>
+
+                <form>
+                    <input type="text" id="firstNameInput" name="firstNameInput" placeholder="Please enter your name...">
+                    <input type="text" id="dealerNameInput" name="dealerNameInput" placeholder="Please enter your dealer's name...">
+
+                    <button type="button" onclick="beginGame()">Start Game</button>
+                </form>
+            </section>
+
+            <button type="button" id="help-button" onclick="openHelp()">?</button>
+
+            <section id="game-section" style="display:none;">
+                <div id="game-table">
+
+                    <div id="dealer-area">
+
+                        <div id="game-deck">
+                            <img src="card_images/PNG/gray_back.png" />
+                            <img src="card_images/PNG/gray_back.png" />
+                            <img src="card_images/PNG/gray_back.png" />
+                        </div>
+
+                        <p id="dealer-score"></p>
+                        <div id="dealer-cards"></div>
+
+                        <h3><span id="dealerName"></span></h3>
+                    </div>
+
+                    <div id="player-area">
+                        <h3><span id="firstName"></span></h3>
+
+                        <div id="player-cards"></div>
+                        <p id="player-score"></p>
+                    </div>
+                </div>
+                
+                <div id="controls">
+
+                    <button id="hitBtn" class="game-btn" onclick="playerHit(); hitButtonOnClick()">Hit</button>
+                    <button id="standBtn" class="game-btn" onclick="playerStand()">Stand</button>
+                    <button id="newRoundBtn" class="game-btn" onclick="newRound()">New Round</button>
+
+                </div>
+
+            </section>
+
+            <p id="game-message" class="message-overlay"></p>
+
+            <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+            <script src="./blackjack.js"></script>
+        </div>
+    </body>
+
+</html>

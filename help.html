@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./animation.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">BlackJack Game Rules</h1>
+    
+    <div class="container">
+        <div class="medium row">
+            <img src="./card_images/PNG/gray_back.png" class="card-image"> 
+            <h3>Basic Rules</h3>
+            
+            <article>
+                <section class="paragraph">
+                    <h4>The Goal</h4>
+                    
+                    <p>
+                        The primary objective of Blackjack is to beat the dealer's 
+                        hand without the total value of your cards exceeding 21. Hitting a total of exactly 21 on the first two cards 
+                        (an Ace and a 10-value card) is called a "Blackjack" or a 
+                        "natural," which typically results in an immediate win at 3-to-2 odds.
+                    </p>
+                </section>
+                
+                <section class="paragraph">
+                    <h4>Card Values</h4>
+                    
+                    <p>
+                        Cards 2 through 10 are worth their face value. Jacks, Queens, 
+                        and Kings (face cards) are all worth 10 points. An Ace is a flexible card and can be counted as ei
+                        ther 1 point or 11 points. Players will always count the Ace 
+                        as 11 unless doing so would make their hand total exceed 21 (a "bust"), in which case it counts as 1.
+                    </p>
+                </section>
+
+                <section class="paragraph">
+                    <h4>Starting the Game</h4>
+                    
+                    <p>
+                    Once the cards are dealt, the player has several options to improve
+                        their hand: Hit (take an additional card), Stand (keep the current hand and end their turn), Double Down (double the bet and take exactly one more card, then stand), and Split 
+                    (if the first two cards are of equal rank, the player can split
+                        them into two separate hands by placing a second, equal bet).
+                    </p>
+                </section>
+
+                <section class="paragraph">
+                    <h4>Dealer's Turn and Winning</h4>
+                    
+                    <p>
+                        After all players have completed their actions, 
+                        the dealer reveals their hole card. The dealer must follow strict rules: they must hit on any total of 16 or less and must stand on any total of 17 or more (including a "soft 17"—an Ace and a 6). If the player's total is closer to 21 than the dealer's total without exceeding 21, the player wins the amount of their bet (1-to-1 odds). 
+                        If both the player and dealer have the same total, 
+                        it is a Push (a tie), and the player's bet is returned.
+                    </p>
+                </section>
+            </article>
+        </div>
+
+        <div class="medium row">
+            <img src="./card_images/PNG/gray_back.png" class="card-image"> 
+            <h3>Content</h3>
+        </div>
+
+        <div class="medium row">
+            <img src="./card_images/PNG/gray_back.png" class="card-image"> 
+            <h3>Content</h3>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+    <script>
+        const { animate } = anime; 
+
+        animate('.card-image', { 
+            x: '0rem', 
+            rotate: '2turn'
+        }); 
+
+        animate('.row .card-image', { scale: [0, 0.5, 1]});
+
+        const { chars } = splitText('h1', { words: false, chars: true }); 
+    </script>
+</body>
+</html>
