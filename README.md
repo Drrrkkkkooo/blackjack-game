@@ -1,5 +1,4 @@
-# Blackjack Game *Unfinished*
-
+# Blackjack Game 
 Web-based Blackjack game with hit/stand logic. Basic rules of blackjack apply. 
 
 ## Highlights
